@@ -8,7 +8,7 @@
 <meta property="og:title" content="Siyovush va Xosiyatxon to'yi">
 <meta property="og:description" content="Sizni nikoh to'yimizga taklif qilamiz. 20-noyabr 2026, Chirchiq, «ASR» to'yxonasi.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#F5EBDD">
+<meta name="theme-color" content="#4D0A1C">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}img{max-width:100%}</style>
 </head>
 <body>
@@ -34,6 +34,8 @@
 html,body{height:100%}
 body{background:#F3ECEE;color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;margin:0}
 body.locked{overflow:hidden}
+html:has(body.locked:not(.opened)),body.locked:not(.opened){background:#4D0A1C}
+body.locked:not(.opened) #page{visibility:hidden}
 
 /* ---------- top controls ---------- */
 .ctrl{position:fixed;z-index:50;top:calc(14px + env(safe-area-inset-top,0px));display:flex;gap:4px}
@@ -46,7 +48,7 @@ body.locked{overflow:hidden}
 button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
 /* ---------- envelope ---------- */
-#envelope{position:fixed;inset:0;z-index:40;overflow:hidden;background:#4D0A1C}
+#envelope{position:fixed;top:0;left:0;right:0;height:100vh;height:100lvh;z-index:40;overflow:hidden;background:#4D0A1C}
 .env-part{position:absolute;inset:0;transition:transform 1.1s cubic-bezier(.7,0,.3,1),opacity 1.1s}
 .env-body{background:radial-gradient(85% 60% at 50% 72%,#7E1834,#5A0E22 55%,#33060F);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%)}
 .env-flap{background:linear-gradient(180deg,#741530,#4D0A1C);clip-path:polygon(0 0,100% 0,50% 58%);filter:drop-shadow(0 12px 14px rgba(0,0,0,.45))}
